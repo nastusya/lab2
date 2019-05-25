@@ -1,0 +1,40 @@
+{% extends "./layout.html" %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+    <div class="profile-wrapper">
+
+                    <div class="profile-content-title"><span>Users list</span></div>
+                    <table class="profile-table">
+                        <tr class="profile-table-header">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Average Score</th>
+                            <th>Email</th>
+                            <th>Finished Courses</th>
+                            <th>Courses In Progress</th>
+                            <th>Price Count</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        {% for user in users_list %}
+                            <tr class="profile-table-row">
+                                <td>{{ user.user_id }}</td>
+                                <td>{{ user.name }}</td>
+                                <td>{{ user.average_score }}</td>
+                                <td>{{ user.user_email }}</td>
+                                <td>{{ user.finished_courses }}</td>
+                                <td>{{ user.courses_in_progress }}</td>
+                                <td>{{ user.price_count }}</td>
+                                <td>&nbsp;&nbsp;<a href="/remove-user/{{ user.user_id }}">X</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td><a href="/edit-user/{{ user.user_id }}">Edit</a></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,35 @@
+{% extends "./layout.html" %}
+
+{% block title %}Add user{% endblock %}
+
+{% block content %}
+                    <form class="profile-form profile-services" action="/add-user" autocomplete="off" method="POST">
+                        <div class="profile-form-group">
+                            <label for="InputName">name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter Name...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="InputScore">average score</label>
+                            <input type="text" name="averageScore" id="averageScore" placeholder="Enter average score...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="InputEmail">email</label>
+                            <input type="text" name="email" id="email" placeholder="Enter email...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="InputFinishedCourses">finished courses</label>
+                            <input type="text" name="finishedCourses" id="finishedCourses" placeholder="Enter finished courses...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="InputCoursesInProgress">courses in progress</label>
+                            <input type="text" name="progress" id="progress" placeholder="Enter courses in progress...">
+                        </div>
+                        <div class="profile-form-group">
+                             <label for="InputPrice">price</label>
+                            <input type="text" name="price" id="price" placeholder="Enter price...">
+                        </div>
+                        <div class="profile-form-group submit">
+                            <button type="submit">Create</button>
+                        </div>
+                    </form>
+{% endblock %}

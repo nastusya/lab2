@@ -1,0 +1,35 @@
+{% extends "./layout.html" %}
+
+{% block title %}Edit user{% endblock %}
+
+{% block content %}
+                    <form class="profile-form profile-services" action="/edit-user/{{ user_id }}" autocomplete="off" method="POST">
+                        <div class="profile-form-group">
+                            <label for="InputName">Name</label>
+                            <input type="text" name="name" id="name" value="{{ name }}" placeholder="Enter name...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="InputScore">average score</label>
+                            <input type="text" name="averageScore" id="averageScore" value="{{ average_score }}" placeholder="Enter average score...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="Input">email</label>
+                            <input type="text" name="email" id="email" value="{{ email }}" placeholder="Enter email...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="InputFinishedCourses">finished courses</label>
+                            <input type="text" name="finishedCourses" id="finishedCourses" value="{{ finished_courses }}" placeholder="Enter finished courses...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="InputCoursesInProgress">courses in progress</label>
+                            <input type="text" name="progress" id="progress" value="{{ courses_in_progress }}" placeholder="Enter progress...">
+                        </div>
+                        <div class="profile-form-group">
+                            <label for="InputPrice">price</label>
+                            <input type="text" name="price" id="price" value="{{ price_count }}" placeholder="Enter price...">
+                        </div>
+                        <div class="profile-form-group submit">
+                            <button type="submit">Update</button>
+                        </div>
+                    </form>
+{% endblock %}
